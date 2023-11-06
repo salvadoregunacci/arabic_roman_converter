@@ -9,7 +9,10 @@ const $resetBtn = document.querySelector('#reset-btn');
 
 const ROM_NUMS = {
   "CM": 900,
+  "CD": 400,
   "XC": 90,
+  "XL": 40,
+  "XIX": 19,
   "IX": 9,
   "IV": 4,
   "M": 1000,
@@ -64,15 +67,19 @@ function _calcRomToArab(e) {
   let _val = $el.value;
   let _isInvalid = false;
   const _invalidPatterns = [
-    /C[DMC]{2,}/g,
+    /C[DM]{2,}/g,
     /DM/g,
     /IX./g,
-    /I[^IV]/g,
+    /I[^IVX]/g,
     /L[DMC]/g,
     /V[XLCDM]/g,
     /X[DM]/g,
-    /[IXC]{4,}/g,
-    /[VLD]{2,}/g,
+    /I{4,}/g,
+    /X{4,}/g,
+    /C{4,}/g,
+    /[VD]{2,}/g,
+    /L{2,}/g,
+    /VIV/g,
     /IV./g,
     /IC/g,
     /VI[^I]./g,
