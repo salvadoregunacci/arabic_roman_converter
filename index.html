@@ -17,26 +17,71 @@
 
 <body>
     <div class="container">
+
         <h3 class="text-light">Конвертер чисел <span class="text-success">(Римские - Арабские)</span></h3>
 
-        <form class="form-control form mt-4">
-            <div class="d-flex align-items-center">
-                <label for="rom_num" class="form-label fs-6">Римское число:</label>
-                <input id="rom_num" class="form-control form-control-lg" type="text"
-                    aria-label="default input example">
-            </div>
+        <div class="d-flex mt-4 gap-5">
+            <form class="form-control form">
+                <div class="text-danger mb-3 info-alert d-none">* Только латинcкие символы (A-Z)</div>
 
-            <div class="d-flex align-items-center">
-                <label></label>
-                <div class="fs-2 w-100">=</div>
-            </div>
+                <div class="d-flex align-items-center">
+                    <div class="wrap">
+                        <label for="rom_num" class="form-label fs-6">Римское число:</label>
+                        <div class="help-text">[I-M]</div>
+                    </div>
+                    <input id="rom_num" class="form-control form-control-lg" type="text"
+                        aria-label="default input example">
+                </div>
 
-            <div class="mt-2 d-flex align-items-center">
-                <label for="arab_num" class="form-label fs-6">Арабское число:</label>
-                <input id="arab_num" class="form-control form-control-lg" type="text"
-                    aria-label="default input example">
-            </div>
-        </form>
+                <div class="d-flex align-items-center">
+                    <label></label>
+                    <div class="fs-2 w-100">=</div>
+                </div>
+
+                <div class="mt-2 d-flex align-items-center">
+                    <div class="wrap">
+                        <label class="form-label fs-6">Арабское число:</label>
+                        <div class="help-text">[0-9]</div>
+                    </div>
+                    <input id="arab_num" class="form-control form-control-lg" type="text"
+                        aria-label="default input example" tabindex="-1">
+                </div>
+
+                <div class="w-100 border border-secondary mt-5 opacity-25"></div>
+                <input type="reset" value="Сбросить" class="btn btn-secondary mt-3" id="reset-btn">
+            </form>
+
+            <table class="table info-table form-control mx-5 h-100">
+                <tr>
+                    <th>I</th>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <th>V</th>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <th>X</th>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <th>L</th>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <th>C</th>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <th>D</th>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <th>M</th>
+                    <td>1000</td>
+                </tr>
+            </table>
+        </div>
     </div>
 
 

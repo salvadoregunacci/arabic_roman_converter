@@ -11,3 +11,44 @@ body {
 label {
   width: 200px;
 }
+
+.info-table {
+  max-width: 120px;
+
+  tr {
+    width: 100%;
+  }
+
+  th,
+  td {
+    font-size: 14px;
+  }
+
+  th {
+    padding-right: 20px;
+  }
+
+  td {
+    border-left: 1px solid #cecece;
+  }
+
+  tr:last-child {
+
+    td,
+    th {
+      border-bottom: none;
+    }
+  }
+}
+
+.help-text {
+  font-size: 12px;
+  color: #a7a7a7;
+  padding-left: 22%;
+  transform: translateY(-50%);
+}
+
+#arab_num {
+  user-select: none;
+  pointer-events: none;
+}
